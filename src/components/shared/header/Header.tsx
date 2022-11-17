@@ -24,15 +24,19 @@ export const Header = ()=> {
     userOptions?.classList.add('user_options-open')
   }
 
+  console.log({height: screen.height, width: screen.width})
   return (
     <>
-      <div ref={headerSearch} className="header_search">
-        <i onClick={openSearch} className='header_search-close bx bx-x'></i>
-        <SearchRecipes />
+      <div ref={headerSearch} className="search_recipes">
+        <i onClick={openSearch} className='search_recipes-close bx bx-x'></i>
+        <SearchRecipes className='search_recipes' />
       </div>
-
+        
       <header className="header">
         <h1 className="header-title">Recipes app</h1>
+        <div className='header_recipes'>
+          <SearchRecipes className='header_recipes' />
+        </div>
         <i onClick={openSearch} className='header-search-icon search-icon bx bx-search-alt'></i>
         <i onClick={openUserOptions} className='header-user bx bx-user-circle'></i>
         <UserOptions />

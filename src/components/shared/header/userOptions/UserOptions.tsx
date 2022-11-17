@@ -5,6 +5,11 @@ import "./userOptions.scss"
 
 export const UserOptions = ()=> {
   const userOptions = useRef<HTMLElement>(null)
+  const circleTheme = useRef<HTMLDivElement>(null)
+
+  const switchTheme = () => {
+    circleTheme.current?.classList.toggle('user_options-darckMode-circleActive')
+  }
 
   const closeUserOptions = () => {
     userOptions.current?.classList.remove('user_options-open')
@@ -12,7 +17,16 @@ export const UserOptions = ()=> {
 
   return (
     <nav ref={userOptions} className="user_options">
+      <div onClick={switchTheme} className="user_options-darckMode">
+        <div className="user_options-darckMode-icons">
+          <i className='user_options-darckMode-icons-moon bx bx-moon'></i>
+          <i className='user_options-darckMode-icons-sun bx bx-sun' ></i>
+        </div>
+        <div ref={circleTheme} className="user_options-darckMode-circle"></div>
+      </div>
+
       <i onClick={closeUserOptions} className='user_options-close bx bx-x' ></i>
+
       <ul className="user_options-list">
         <li className="user_options-list-option">
           <NavLink to={'/'} className="user_options-list-option-link" >
@@ -55,8 +69,9 @@ export const UserOptions = ()=> {
           </NavLink>
         </li>
       </ul>
+
       <button className="user_options-loginAndRegister">
-        Registrate | Inicia serión
+        Registrate | Inicia seción
       </button>
     </nav>
   )

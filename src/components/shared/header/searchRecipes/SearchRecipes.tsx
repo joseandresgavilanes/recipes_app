@@ -1,11 +1,14 @@
 import "./searchRecipes.scss"
 
-export const SearchRecipes = ()=> {
+export const SearchRecipes = ({className}: {className: string})=> {
+
+
+
   return (
-    <form className="header_search-form">
-      <input className="header_search-input" type="text" id="search-text" name="text" placeholder="Busca una receta" autoComplete="off"  />
-      <button className="header_search-btn">
-        <i className='header_search-icon bx bx-search-alt'></i>
+    <form onSubmit={(event)=> event.preventDefault()} className={className+`-form`}>
+      <input className={className+'-input'} type="text" id="search-text" name="text" placeholder="Busca una receta" autoComplete="off"  />
+      <button className={className+'-btn'}>
+        <i className={className+'-icon bx bx-search-alt'}></i>
       </button>
     </form>
   )
