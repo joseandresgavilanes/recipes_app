@@ -1,0 +1,39 @@
+.header{
+  top: 0;
+  width: 100%;
+  height: 46px;
+  padding: 0 8px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  box-shadow: 0 0 4px #3b3b3b;
+  justify-content: space-between;
+  background-color: var(--Primary-color);
+
+  &-title{
+    color: var(--Text-white);
+    font-size: 24px;
+  }
+
+
+  &-open-search{
+    top: 46px;
+  }
+
+  &-search-icon{
+    color: var(--Text-white);
+    font-size: 32px;
+  }
+
+  &-user{
+    color: var(--Text-white);
+    font-size: 35px;
+  }
+}
+
+
+
+/*? user  */
+.user_navbar{
+  position: absolute;
+}

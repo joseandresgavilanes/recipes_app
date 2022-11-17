@@ -2,8 +2,10 @@
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   
   --Primary-color: #8cc63e;
+  --Light-background: #fafafa;
   --Text-white: #ebebeb;
   --Text-gray: #666;
+  --Button-color: #28b6a6;
 }
 
 * {
@@ -18,6 +20,7 @@ body {
   margin: 0;
   height: 100vh;
   padding-top: 46px;
+  background-color: var(--Light-background);
 }
 
 h1, h2, h3, h4, p, ul {

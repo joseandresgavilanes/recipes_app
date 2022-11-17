@@ -1,7 +1,8 @@
 import { useRef } from 'react'
-import { SearchRecipes } from "./SearchRecipes"
+import { SearchRecipes } from "./searchRecipes/SearchRecipes"
 
-import "./header.sass"
+import "./header.scss"
+import { UserOptions } from './userOptions/UserOptions'
 
 export const Header = ()=> {
   const headerSearch = useRef<HTMLDivElement>(null)
@@ -9,13 +10,18 @@ export const Header = ()=> {
   const openSearch = () => {
     if(headerSearch.current) {
       const searchDocument = headerSearch.current
-      searchDocument.classList.toggle('open-header-search')
+      searchDocument.classList.toggle('header-open-search')
       const input = document.getElementById('search-text')
 
-      if(searchDocument.classList.contains('open-header-search')) input?.focus()
+      if(searchDocument.classList.contains('header-open-search')) input?.focus()
       else input?.blur()
       
     }
+  }
+
+  const openUserOptions = () => {
+    const userOptions = document.querySelector('.user_options')
+    userOptions?.classList.add('user_options-open')
   }
 
   return (
@@ -26,12 +32,10 @@ export const Header = ()=> {
       </div>
 
       <header className="header">
-        <h1 className="header_title">Recipes app</h1>
-        <i onClick={openSearch} className='header_search-icon search-icon bx bx-search-alt'></i>
-        <i className='header_user bx bx-user-circle'></i>
-        <nav className="user_navbar">
-          <ul></ul>
-        </nav>
+        <h1 className="header-title">Recipes app</h1>
+        <i onClick={openSearch} className='header-search-icon search-icon bx bx-search-alt'></i>
+        <i onClick={openUserOptions} className='header-user bx bx-user-circle'></i>
+        <UserOptions />
       </header>
     </>
   )
