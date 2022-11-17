@@ -108,3 +108,16 @@
   top: 0;
   right: 0;
 }
+
+
+@media (min-width: 700px) {
+  .user_options{
+    &-darckMode{
+      cursor: pointer;
+    }
+
+    &-list-option-link:hover{
+      background-color: #a8e05c;
+    }
+  }
+}
