@@ -3,10 +3,12 @@ import { SearchRecipes } from "./searchRecipes/SearchRecipes"
 
 import "./header.scss"
 import { UserOptions } from './userOptions/UserOptions'
+import { useNavigate } from 'react-router-dom'
 
 export const Header = ()=> {
   const headerSearch = useRef<HTMLDivElement>(null)
-  
+  const navigate = useNavigate()
+
   const openSearch = () => {
     if(headerSearch.current) {
       const searchDocument = headerSearch.current
@@ -24,6 +26,8 @@ export const Header = ()=> {
     userOptions?.classList.add('user_options-open')
   }
 
+  const redirectHome = () => navigate('/')
+
   console.log({height: screen.height, width: screen.width})
   return (
     <>
@@ -33,7 +37,7 @@ export const Header = ()=> {
       </div>
         
       <header className="header">
-        <h1 className="header-title">Recipes app</h1>
+        <h1 onClick={redirectHome} className="header-title">Recipes app</h1>
         <div className='header_recipes'>
           <SearchRecipes className='header_recipes' />
         </div>
