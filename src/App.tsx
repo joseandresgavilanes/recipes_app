@@ -10,9 +10,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Routes>
-
-      </Routes> */}
+      <Routes>
+        <Route path='/profile' element={'hola'} />
+        <Route path='/my-recipes' />
+        <Route path='/favorites' />
+        <Route path='/supermarket-list' />
+        <Route path='/menu-planner' />
+      </Routes>
     </div>
   )
 }

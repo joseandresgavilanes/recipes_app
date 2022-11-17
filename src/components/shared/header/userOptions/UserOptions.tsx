@@ -15,6 +15,10 @@ export const UserOptions = ()=> {
     userOptions.current?.classList.remove('user_options-open')
   }
 
+  const linkActive = ({isActive}: {isActive: boolean}) => {
+    return (isActive ? 'user_options-list-option-linkActive' : '')+' user_options-list-option-link'
+  }
+
   return (
     <nav ref={userOptions} className="user_options">
       <div onClick={switchTheme} className="user_options-darckMode">
@@ -29,7 +33,7 @@ export const UserOptions = ()=> {
 
       <ul className="user_options-list">
         <li className="user_options-list-option">
-          <NavLink to={'/'} className="user_options-list-option-link" >
+          <NavLink to={'/profile'} className={linkActive} >
             <div className="user_options-list-option-text">
               <i className='bx bx-cog'></i>
               <p>Perfil</p>
@@ -37,7 +41,7 @@ export const UserOptions = ()=> {
           </NavLink>
         </li>
         <li className="user_options-list-option">
-          <NavLink to={'/'} className="user_options-list-option-link" >
+          <NavLink to={'/my-recipes'} className={linkActive} >
             <div className="user_options-list-option-text">
               <i className='bx bx-notepad'></i>
               <p>Mis recetas</p>
@@ -45,7 +49,7 @@ export const UserOptions = ()=> {
           </NavLink>
         </li>
         <li className="user_options-list-option">
-          <NavLink to={'/'} className="user_options-list-option-link" >
+          <NavLink to={'/favorites'} className={linkActive} >
             <div className="user_options-list-option-text">
               <i className='bx bx-heart'></i>
               <p>Favoritos</p>
@@ -53,7 +57,7 @@ export const UserOptions = ()=> {
           </NavLink>
         </li>
         <li className="user_options-list-option">
-          <NavLink to={'/'} className="user_options-list-option-link" >
+          <NavLink to={'/supermarket-list'} className={linkActive} >
             <div className="user_options-list-option-text">
               <i className='bx bx-cart' ></i>
               <p>Lista del súper</p>
@@ -61,7 +65,7 @@ export const UserOptions = ()=> {
           </NavLink>
         </li>
         <li className="user_options-list-option">
-          <NavLink to={'/'} className="user_options-list-option-link" >
+          <NavLink to={'/menu-planner'} className={linkActive} >
             <div className="user_options-list-option-text">
               <i className='bx bx-calendar' ></i>
               <p>Planeador de menú</p>
