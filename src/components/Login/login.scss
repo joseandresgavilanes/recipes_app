@@ -1,0 +1,115 @@
+
+
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+
+    &__container{
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__card {
+    width: 300px;
+    padding: 1.9rem 1.2rem;
+    text-align: center;
+    background-color: var(--Secondary-color);
+    height: 300px;
+    border-radius: 5px;
+    
+        @media (min-width: 700px){
+            width: 600px;
+        }
+   }
+   
+
+
+   /*Inputs*/
+   &__field {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    background-color: var(--Light-background);
+    border-radius: 4px;
+    padding: 1em 1em;
+   }
+   
+   
+   
+   &__input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: var(--Primary-color);
+   }
+   
+   /*Text*/
+   &__title {
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--Text-white);
+    font-weight: 700;
+    letter-spacing: 1px;
+   }
+   
+   /*Buttons*/
+   &__btn {
+    margin: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: .8em;
+    text-transform: uppercase;
+    padding: 1em 3em;
+    background-color: var(--Primary-color);
+    color: var(--Text-white);
+    box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    @media (min-width: 700px){
+         padding: 1em 10em;
+    }
+    
+   }
+   
+   &__btn-link {
+    color: var(--Text-white);
+    display: block;
+    font-size: .75em;
+    transition: color .3s ease-out;
+   }
+   
+   /*Hover & focus*/
+   &__field input:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+   }
+   
+   &__btn:hover {
+    border: 1px solid var(--Primary-color);
+    background-color: transparent;
+    color: var(--Primary-color);
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.2);
+   }
+   
+   &__btn-link:hover {
+    color: var(--Primary-color);
+   }
+   
+}
+
+   
+   .input-icon {
+    height: 1em;
+    width: 1em;
+    fill: var(--Primary-color);
+   }

@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Header } from './components/shared/header/Header'
 
 import './App.css'
+import Login from './components/Login/Login'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/profile' element={'hola'} />
+        <Route path='/login' element={<Login />} />
         <Route path='/my-recipes' />
         <Route path='/favorites' />
         <Route path='/supermarket-list' />
