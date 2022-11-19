@@ -1,4 +1,1 @@
-import { config } from "dotenv"
-config()
-
-export const endpointUrl = process.env.ENDPOINT_URL
+export const endpointUrl = 'https://recipes-j1sh.onrender.com/api/v1/'

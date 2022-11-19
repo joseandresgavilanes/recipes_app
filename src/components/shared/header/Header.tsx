@@ -1,9 +1,9 @@
 import { useRef } from 'react'
 import { SearchRecipes } from "./searchRecipes/SearchRecipes"
-
-import "./header.scss"
 import { UserOptions } from './userOptions/UserOptions'
 import { useNavigate } from 'react-router-dom'
+
+import "./header.scss"
 
 export const Header = ()=> {
   const headerSearch = useRef<HTMLDivElement>(null)
@@ -26,9 +26,8 @@ export const Header = ()=> {
     userOptions?.classList.add('user_options-open')
   }
 
-  const redirectHome = () => navigate('/')
+  const redirectHome = () => navigate('/register')
 
-  console.log({height: screen.height, width: screen.width})
   return (
     <>
       <div ref={headerSearch} className="search_recipes">
