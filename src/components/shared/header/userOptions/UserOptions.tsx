@@ -1,11 +1,12 @@
 import { useRef } from "react"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 
 import "./userOptions.scss"
 
 export const UserOptions = ()=> {
   const userOptions = useRef<HTMLElement>(null)
   const circleTheme = useRef<HTMLDivElement>(null)
+  const navigate = useNavigate()
 
   const switchTheme = () => {
     circleTheme.current?.classList.toggle('user_options-darckMode-circleActive')
@@ -32,50 +33,58 @@ export const UserOptions = ()=> {
       <i onClick={closeUserOptions} className='user_options-close bx bx-x' ></i>
 
       <ul className="user_options-list">
-        <li className="user_options-list-option">
+        <li onClick={closeUserOptions} className="user_options-list-option">
           <NavLink to={'/profile'} className={linkActive} >
             <div className="user_options-list-option-text">
-              <i className='bx bx-cog'></i>
-              <p>Perfil</p>
+              <i className="fa-solid fa-gear"></i>
+              <p>Profile</p>
             </div>
           </NavLink>
         </li>
-        <li className="user_options-list-option">
+        <li onClick={closeUserOptions} className="user_options-list-option">
           <NavLink to={'/my-recipes'} className={linkActive} >
             <div className="user_options-list-option-text">
-              <i className='bx bx-notepad'></i>
-              <p>Mis recetas</p>
+              <i className="fa-solid fa-book"></i>
+              <p>My recipes</p>
             </div>
           </NavLink>
         </li>
-        <li className="user_options-list-option">
+        <li onClick={closeUserOptions} className="user_options-list-option">
           <NavLink to={'/favorites'} className={linkActive} >
             <div className="user_options-list-option-text">
-              <i className='bx bx-heart'></i>
-              <p>Favoritos</p>
+              <i className='fa-solid fa-heart'></i>
+              <p>Favorites</p>
             </div>
           </NavLink>
         </li>
-        <li className="user_options-list-option">
+        <li onClick={closeUserOptions} className="user_options-list-option">
+          <NavLink to={'/upload-recipe'} className={linkActive} >
+            <div className="user_options-list-option-text">
+              <i className='fa-solid fa-square-plus'></i>
+              <p>Upload recipe</p>
+            </div>
+          </NavLink>
+        </li>
+        <li onClick={closeUserOptions} className="user_options-list-option">
           <NavLink to={'/supermarket-list'} className={linkActive} >
             <div className="user_options-list-option-text">
-              <i className='bx bx-cart' ></i>
-              <p>Lista del súper</p>
+              <i className='fa-solid fa-cart-shopping'></i>
+              <p>Supermarket list</p>
             </div>
           </NavLink>
         </li>
-        <li className="user_options-list-option">
+        <li onClick={closeUserOptions} className="user_options-list-option">
           <NavLink to={'/menu-planner'} className={linkActive} >
             <div className="user_options-list-option-text">
-              <i className='bx bx-calendar' ></i>
-              <p>Planeador de menú</p>
+              <i className='fa-solid fa-calendar-days'></i>
+              <p>Menu planner</p>
             </div>
           </NavLink>
         </li>
       </ul>
 
-      <button className="user_options-loginAndRegister">
-        Registrate | Inicia seción
+      <button onClick={()=> {navigate('/register'), closeUserOptions()}} className="user_options-loginAndRegister">
+        Register | Start session
       </button>
     </nav>
   )

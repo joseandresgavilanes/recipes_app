@@ -32,7 +32,7 @@ export const Header = ()=> {
   return (
     <>
       <div ref={headerSearch} className="search_recipes">
-        <i onClick={openSearch} className='search_recipes-close bx bx-x'></i>
+        <i onClick={openSearch} className='search_recipes-close fa-solid fa-magnifying-glass'></i>
         <SearchRecipes className='search_recipes' />
       </div>
         
@@ -41,8 +41,8 @@ export const Header = ()=> {
         <div className='header_recipes'>
           <SearchRecipes className='header_recipes' />
         </div>
-        <i onClick={openSearch} className='header-search-icon search-icon bx bx-search-alt'></i>
-        <i onClick={openUserOptions} className='header-user bx bx-user-circle'></i>
+        <i onClick={openSearch} className='header-search-icon search-icon fa-solid fa-magnifying-glass'></i>
+        <i onClick={openUserOptions} className='header-user fa-regular fa-circle-user'></i>
         <UserOptions />
       </header>
     </>

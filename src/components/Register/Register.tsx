@@ -104,7 +104,7 @@ return (
       
 
       <button className="login__btn" >Register</button>
-      <a href="#" className="login__btn-link">Already got an account?</a>
+      <a href="#/login" className="login__btn-link">Already got an account?</a>
 
   </form>
 </div>
