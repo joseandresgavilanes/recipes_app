@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useState } from "react"
 import axios from "axios"
-import "../Login/login.scss"
+import "../login/login.scss"
 import "./register.scss"
 const Register = () => {
   
