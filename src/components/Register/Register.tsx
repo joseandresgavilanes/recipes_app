@@ -105,7 +105,18 @@ return (
 
       <button className="login__btn" >Register</button>
       <a href="#" className="login__btn-link">Already got an account?</a>
-
+      <i className="fa-solid fa-utensils"></i>
+        <i className="fa-solid fa-carrot"></i>
+        <i className="fa-solid fa-mug-hot"></i>
+        <i className="fa-solid fa-pizza-slice"></i>
+        <i className="fa-solid fa-pepper-hot"></i>
+        <i className="fa-solid fa-ice-cream"></i>
+        <i className="fa-solid fa-martini-glass-citrus"></i>
+        <i className="fa-solid fa-drumstick-bite"></i>
+        <i className="fa-solid fa-burger"></i>
+        <i className="fa-solid fa-shrimp"></i>
+        <i className="fa-solid fa-wheat-awn"></i>
+        <i className="fa-solid fa-cookie-bite"></i>
   </form>
 </div>
 

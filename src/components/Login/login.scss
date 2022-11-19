@@ -171,7 +171,6 @@
         position: absolute;
         bottom: 10px;
         right: 60px;
-        z-index: 0;
         color: rgba(105, 105, 105, 0.463);
         font-size: 20px;
         transform: rotate(60deg);
@@ -199,11 +198,13 @@
         left: 20px;
         color: rgba(105, 105, 105, 0.463);
         font-size: 30px;
+        transform: rotate(-30deg);
+
     }
     &shrimp{
         position: absolute;
         bottom: 60px;
-        right: 60px;
+        right: 50px;
         color: rgba(105, 105, 105, 0.463);
         font-size: 20px;
         transform: rotate(-30deg);
