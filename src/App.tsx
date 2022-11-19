@@ -18,6 +18,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/my-recipes' />
         <Route path='/favorites' />
+        <Route path='/upload-recipe' />
         <Route path='/supermarket-list' />
         <Route path='/menu-planner' />
       </Routes>
