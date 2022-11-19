@@ -74,6 +74,7 @@
     box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
     transition: all .3s ease-in-out;
     cursor: pointer;
+    border: 1px solid var(--Primary-color);
     @media (min-width: 700px){
          padding: 1em 10em;
     }
