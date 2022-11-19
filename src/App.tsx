@@ -6,6 +6,9 @@ import { Header } from './components/shared/header/Header'
 import './App.css'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
+import { endpointUrl } from './config'
+
+console.log(endpointUrl)
 
 function App() {
 
