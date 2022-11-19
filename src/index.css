@@ -2,11 +2,15 @@
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   
   --Primary-color: #8cc63e;
+  --Secondary-color: #22343efb;
   --Light-background: #fafafa;
   --Text-white: #ebebeb;
   --Text-gray: #666;
   --Button-color: #28b6a6;
 }
+
+
+
 
 * {
   box-sizing: border-box;
