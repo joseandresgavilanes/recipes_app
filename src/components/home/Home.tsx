@@ -1,8 +1,10 @@
 import React from 'react'
-
+import TopRecipes from './topRecipes/TopRecipes'
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <TopRecipes/>
+    </div>
   )
 }
 
