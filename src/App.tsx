@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { endpointUrl } from './config'
 import { Routes, Route } from 'react-router-dom'
 import { Header } from './components/shared/header/Header'
+
+import './App.css'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 

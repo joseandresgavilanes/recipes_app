@@ -20,6 +20,7 @@
     text-align: center;
     background-color: rgb(161, 161, 161);
     border-radius: 5px;
+    position: relative;
     
         @media (min-width: 700px){
             width: 600px;
@@ -114,3 +115,123 @@
     fill: var(--Primary-color);
     color: var(--Primary-color);
    }
+
+
+   .fa-{
+    &carrot{
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+       }
+
+    &utensils{
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(-30deg);
+    }
+    &mug-hot{
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(30deg);
+    }
+    &pizza-slice{
+        position: absolute;
+        bottom: 30px;
+        left: 0px;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(-90deg);
+    }
+    &pepper-hot{
+        position: absolute;
+        bottom: 10px;
+        left: 55px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 20px;
+    }
+    &pizza-slice{
+        position: absolute;
+        bottom: 90px;
+        left: 30px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(-90deg);
+    }
+    &ice-cream{
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(60deg);
+    }
+    &martini-glass-citrus{
+        position: absolute;
+        bottom: 80px;
+        right: 30px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 20px;
+        transform: rotate(20deg);
+
+    }
+    &drumstick-bite{
+        position: absolute;
+        bottom: 90px;
+        left: 30px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(-90deg);
+    }
+    &burger{
+        position: absolute;
+        bottom: 90px;
+        left: 30px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(-90deg);
+    }
+    &shrimp{
+        position: absolute;
+        bottom: 60px;
+        right: 60px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 15px;
+        transform: rotate(-30deg);
+    }
+    &wheat-awn{
+        position: absolute;
+        bottom: 90px;
+        left: 30px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(-90deg);
+    }
+    &cookie-bite{
+        position: absolute;
+        bottom: 90px;
+        left: 30px;
+        z-index: 0;
+        color: rgba(105, 105, 105, 0.463);
+        font-size: 30px;
+        transform: rotate(-90deg);
+    }
+   }
+  
+
+ 

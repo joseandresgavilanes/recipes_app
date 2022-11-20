@@ -26,7 +26,7 @@ export const Header = ()=> {
     userOptions?.classList.add('user_options-open')
   }
 
-  const redirectHome = () => navigate('/register')
+  const redirectHome = () => navigate('/')
 
   return (
     <>

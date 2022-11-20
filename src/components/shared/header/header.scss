@@ -8,6 +8,7 @@
   align-items: center;
   box-shadow: 0 0 4px #3b3b3b;
   justify-content: space-between;
+  z-index: 10;
   background-color: var(--Primary-color);
 
   &-title{
@@ -37,6 +38,7 @@
     padding: 0 12px;
   
     &-title{
+      cursor: pointer;
       font-size: 26px;
     }
 
