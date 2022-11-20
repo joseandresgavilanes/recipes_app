@@ -6,6 +6,7 @@ import { Header } from './components/shared/header/Header'
 import './App.css'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
+import Home from './components/home/Home'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
+        <Route path='/' element={<Home/>} />
         <Route path='/profile' element={'hola'} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />

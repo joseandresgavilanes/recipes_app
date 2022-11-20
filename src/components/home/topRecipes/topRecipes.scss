@@ -1,0 +1,156 @@
+.topRecipes{
+    height: calc(100vh - 35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    &__recipe{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 50%;
+        height: 600px;
+       padding: 40px;
+        background: url(https://dinnerthendessert.com/wp-content/uploads/2017/12/Ribeye-Steak2-1-scaled.jpg) no-repeat ;
+    &-container{
+        display: flex;
+        justify-content: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: .5em;
+        padding: 25px;
+        background-color: rgba(255, 255, 255, 0.854);
+    & h2{
+        font-size: 45px;
+        text-align: center;
+        font-weight: 800;
+        color: var(--Primary-color);
+    }
+    & h3{
+        font-size: 15px;
+        text-align: center;
+        color: rgb(86, 86, 86);
+    }
+    & p{
+        text-align: center;
+        font-size: 18px;
+        color: rgb(86, 86, 86);
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    & a{
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: var(--Primary-color);
+    }
+
+    }
+    
+    }
+    &__scroll{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: 600px;
+       padding: 20px;
+       text-align: center;
+       background-color: rgb(244, 248, 229);;
+       overflow-y: scroll;
+
+        &-container{
+            width: 100%;
+            padding: 30px 10px 10px 10px;
+            &__heading{
+                height: 10%;
+                color: rgb(86, 86, 86);
+                line-height: 30px;
+                font-size: 30px;
+                text-decoration: underline var(--Primary-color);
+                
+            }
+
+            &__recipes{
+                
+                padding: 10px;
+                height: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                gap: 1em;
+                &-recipe{
+                    background-color: white;
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    align-items: flex-start;
+                    text-align: start;
+                    & img{
+                        width: 100%;
+                        height: 50%;
+                        object-fit: cover;
+                    }
+                    &__text{
+                        padding: 0 20px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5em;
+                        & h3{
+                            font-size: 14px;
+                            color: var(--Primary-color);
+                        }
+                        & h2{
+                            font-size: 25px;
+                            font-weight: 500;
+                            letter-spacing: 1.5px;
+                                color: rgb(86, 86, 86);
+
+                        
+                        }
+                        &__details{
+                            display: flex;
+                            color: rgb(86, 86, 86);
+                            gap: 1.5em;
+                            margin-top: 20px;
+                            align-items: flex-end;
+                            &-time{
+                                display: flex;
+                                gap: .3em;
+                                justify-content: center;
+                                align-items: center;
+                                color: var(--Primary-color);
+                                & i{
+                                    font-size: 16px;
+                                    align-self: center;
+
+                                }
+                                & p{
+                                    font-size: 12px;
+                                }
+                            }
+                            &-star{
+                                display: flex;
+                                gap: .2em;
+                                justify-content: center;
+                                align-items: center;
+                                color: var(--Primary-color);
+                                & i{
+                                    font-size: 20px;
+                                    align-self: center;
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            
+        }
+    }
+}
