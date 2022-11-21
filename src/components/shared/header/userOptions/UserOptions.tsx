@@ -7,6 +7,7 @@ export const UserOptions = ()=> {
   const userOptions = useRef<HTMLElement>(null)
   const circleTheme = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
+  const principalClass = 'user_options'
 
   const switchTheme = () => {
     circleTheme.current?.classList.toggle('user_options-darckMode-circleActive')
@@ -21,7 +22,7 @@ export const UserOptions = ()=> {
   }
 
   return (
-    <nav ref={userOptions} className="user_options">
+    <nav ref={userOptions} className={principalClass}>
       <div onClick={switchTheme} className="user_options-darckMode">
         <div className="user_options-darckMode-icons">
           <i className='user_options-darckMode-icons-moon bx bx-moon'></i>
@@ -86,6 +87,16 @@ export const UserOptions = ()=> {
       <button onClick={()=> {navigate('/register'), closeUserOptions()}} className="user_options-loginAndRegister">
         Register | Start session
       </button>
+
+      <i className={principalClass+'-icon fa-solid fa-bowl-food '+principalClass+'-bowl-food'}></i>
+      <i className={principalClass+'-icon fa-solid fa-carrot '+principalClass+'-carrot'}></i>
+      <i className={principalClass+`-icon fa-solid fa-burger `+principalClass+'-burger'}></i>
+      <i className={principalClass+'-icon fa-solid fa-mug-hot '+principalClass+'-mug-hot'}></i>
+      <i className={principalClass+'-icon fa-solid fa-wine-glass '+principalClass+'-wine-glass'}></i>
+      <i className={principalClass+'-icon fa-solid fa-pizza-slice '+principalClass+'-pizza-slice'}></i>
+      <i className={principalClass+'-icon fa-solid fa-martini-glass-citrus '+principalClass+'-glass-citrus'}></i>
+      <i className={principalClass+'-icon fa-solid fa-hotdog '+principalClass+'-hotdog'}></i>
+      <i className={principalClass+'-icon fa-solid fa-drumstick-bite '+principalClass+'-drumstick-bite'}></i>
     </nav>
   )
 }

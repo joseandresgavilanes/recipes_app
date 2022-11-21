@@ -106,18 +106,18 @@ return (
       <button className="login__btn" >Register</button>
       <a href="#/login" className="login__btn-link">Already got an account?</a>
 
-      <i className="fa-solid fa-utensils"></i>
-        <i className="fa-solid fa-carrot"></i>
-        <i className="fa-solid fa-mug-hot"></i>
-        <i className="fa-solid fa-pizza-slice"></i>
-        <i className="fa-solid fa-pepper-hot"></i>
-        <i className="fa-solid fa-ice-cream"></i>
-        <i className="fa-solid fa-martini-glass-citrus"></i>
-        <i className="fa-solid fa-drumstick-bite"></i>
-        <i className="fa-solid fa-burger"></i>
-        <i className="fa-solid fa-shrimp"></i>
-        <i className="fa-solid fa-wheat-awn"></i>
-        <i className="fa-solid fa-cookie-bite"></i>
+      <i className="login-icon-utensils fa-solid fa-utensils"></i>
+      <i className="login-icon-carrot fa-solid fa-carrot"></i>
+      <i className="login-icon-mug-hot fa-solid fa-mug-hot"></i>
+      <i className="login-icon-pizza-slice fa-solid fa-pizza-slice"></i>
+      <i className="login-icon-pepper-hot fa-solid fa-pepper-hot"></i>
+      <i className="login-icon-ice-cream fa-solid fa-ice-cream"></i>
+      <i className="login-icon-martini-glass-citrus fa-solid fa-martini-glass-citrus"></i>
+      <i className="login-icon-drumstick-bite fa-solid fa-drumstick-bite"></i>
+      <i className="login-icon-burger fa-solid fa-burger"></i>
+      <i className="login-icon-shrimp fa-solid fa-shrimp"></i>
+      <i className="login-icon-wheat-awn fa-solid fa-wheat-awn"></i>
+      <i className="login-icon-cookie-bite fa-solid fa-cookie-bite"></i>
   </form>
 </div>
 

@@ -103,6 +103,16 @@
     border-radius: 5px;
     background-color: var(--Button-color);
   }
+
+  &-icon{
+    position: absolute;
+    color: #965b5b;
+  }
+
+  &-carrot{
+    top: 10px;
+    left: 0;
+  }
 }
 
 .user_options-open{
