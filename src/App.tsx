@@ -2,15 +2,14 @@ import { useState } from 'react'
 import { endpointUrl } from './config'
 import { Routes, Route } from 'react-router-dom'
 import { Header } from './components/shared/header/Header'
-import Login from './components/Login/Login'
-import Register from './components/Register/Register'
+import Login from './components/login/Login'
+import Register from './components/register/Register'
+import { Home } from './components/home/Home'
 
 import './App.css'
-import { Home } from './components/home/Home'
 
 
 function App() {
-
   return (
     <div className="App">
       <Header />
