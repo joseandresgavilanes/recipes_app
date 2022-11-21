@@ -23,6 +23,7 @@
     width: 70px;
     height: 30px;
     position: relative;
+    z-index: 2;
     
     &-icons{
       width: 100%;
@@ -60,11 +61,13 @@
     right: 10px;
     position: absolute;
     font-size: 32px;
+    z-index: 2;
   }
 
   &-list{
     width: 100%;
     display: flex;
+    z-index: 2;
     flex-direction: column;
     justify-content: center;
 
@@ -105,13 +108,74 @@
   }
 
   &-icon{
+    color: #b8b8b8;
+    opacity: 60%;
     position: absolute;
-    color: #965b5b;
+    font-size: 28px;
+  }
+
+  &-bowl-food{
+    top: 14px;
+    left: 20px;
+    rotate: -30deg;
+    font-size: 35px;
   }
 
   &-carrot{
-    top: 10px;
-    left: 0;
+    top: 50px;
+    left: 140px;
+  }
+
+  &-burger{
+    top: 50px;
+    right: 50px;
+    rotate: 40deg;
+  }
+
+  &-mug-hot{
+    top: 130px;
+    right: 50px;
+    font-size: 40px;
+  }
+
+  &-wine-glass{
+    top: 150px;
+    left: 30px;
+    font-size: 30px;
+    rotate: -20deg;
+  }
+
+  &-pizza-slice{
+    top: 254px;
+    right: 10px;
+    font-size: 50px;
+    rotate: 50deg;
+  }
+
+  &-glass-citrus{
+    top: 280px;
+    left: 20px;
+    font-size: 30px;
+    rotate: 20deg;
+  }
+
+  &-hotdog{
+    top: 450px;
+    right: 30px;
+    font-size: 35px;
+  }
+
+  &-drumstick-bite{
+    top: 336px;
+    left: 100px;
+    rotate: 200deg;
+    font-size: 34px;
+  }
+
+  &-cookie-bite{
+    bottom: 26px;
+    left: 30px;
+    font-size: 30px;
   }
 }
 

@@ -97,6 +97,7 @@ export const UserOptions = ()=> {
       <i className={principalClass+'-icon fa-solid fa-martini-glass-citrus '+principalClass+'-glass-citrus'}></i>
       <i className={principalClass+'-icon fa-solid fa-hotdog '+principalClass+'-hotdog'}></i>
       <i className={principalClass+'-icon fa-solid fa-drumstick-bite '+principalClass+'-drumstick-bite'}></i>
+      <i className={principalClass+'-icon fa-solid fa-cookie-bite '+principalClass+'-cookie-bite'}></i>
     </nav>
   )
 }
