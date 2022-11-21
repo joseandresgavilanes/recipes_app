@@ -121,7 +121,7 @@ export const Slider = () => {
     console.log(newValue)
     refLastSlider.current?.setAttribute("style", `transform: translateX(${-(33.33*newValue)}%)`)
   }
-  
+
   return (
     <section className={principalClass}>
       <div className={principalClass+"-primari"}>

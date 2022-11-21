@@ -1,10 +1,11 @@
 import { Slider } from "./slider/Slider"
+import TopRecipes from './topRecipes/TopRecipes'
 
-
-export const Home = ()=> {
+export const Home = () => {
   return (
-    <section className="home">
+    <div>
       <Slider />
-    </section>
+      <TopRecipes />
+    </div>
   )
 }
