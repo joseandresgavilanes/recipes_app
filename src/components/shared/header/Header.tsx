@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { SearchRecipes } from "./searchRecipes/SearchRecipes"
 import { UserOptions } from './userOptions/UserOptions'
 import { useNavigate } from 'react-router-dom'
+import icon from '../../../assets/recipes-logo.png'
 
 import "./header.scss"
 
@@ -36,7 +37,10 @@ export const Header = ()=> {
       </div>
         
       <header className="header">
-        <h1 onClick={redirectHome} className="header-title">Recipes app</h1>
+        <div onClick={redirectHome} className="header-title">
+          <img className='header-title-logo' src={icon} alt="logo" />
+          <h1 className="header-title-text">Recipes app</h1>
+        </div>
         <div className='header_recipes'>
           <SearchRecipes className='header_recipes' />
         </div>

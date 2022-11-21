@@ -12,8 +12,19 @@
   background-color: var(--Primary-color);
 
   &-title{
-    color: white;
-    font-size: 22px;
+    height: 100%;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+
+    &-text{
+      color: white;
+      font-size: 22px;
+    }
+
+    &-logo{
+      height: 70%;
+    }
   }
 
   &-open-search{
@@ -35,11 +46,14 @@
 @media (min-width: 700px) {
   .header {
     height: 60px;
-    padding: 0 12px;
+    padding: 0 16px;
   
     &-title{
       cursor: pointer;
-      font-size: 26px;
+      
+      &-text{
+        font-size: 26px;
+      }
     }
 
     &-search-icon{
