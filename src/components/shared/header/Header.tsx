@@ -31,7 +31,7 @@ export const Header = ()=> {
   return (
     <>
       <div ref={headerSearch} className="search_recipes">
-        <i onClick={openSearch} className='search_recipes-close fa-solid fa-magnifying-glass'></i>
+        <i onClick={openSearch} className='search_recipes-close fa-solid fa-xmark'></i>
         <SearchRecipes className='search_recipes' />
       </div>
         

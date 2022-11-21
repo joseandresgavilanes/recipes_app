@@ -1,0 +1,23 @@
+.sliders_container-secondary-slider-categories-category{
+  width: 100px;
+  height: 104px;
+  display: flex;
+  padding: 0 5px;
+  overflow: hidden;
+  flex-direction: column;
+  padding-bottom: 6px;
+  background-color: #e2e2e2;
+  justify-content: space-between;
+
+  &-img{
+    width: 100%;
+  }
+
+  &-name{
+    text-align: center;
+  }
+
+  @media (min-width: 700px) {
+    cursor: pointer;
+  }
+}
