@@ -106,7 +106,6 @@ return (
       <button className="login__btn" >Register</button>
       <a href="#/login" className="login__btn-link">Already got an account?</a>
 
-      <a href="#" className="login__btn-link">Already got an account?</a>
       <i className="fa-solid fa-utensils"></i>
         <i className="fa-solid fa-carrot"></i>
         <i className="fa-solid fa-mug-hot"></i>
