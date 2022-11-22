@@ -1,6 +1,8 @@
 import { useForm } from 'react-hook-form'
 import { useState } from "react"
 import axios from "axios"
+import { endpointUrl } from '../../config'
+
 import "../login/login.scss"
 import "./register.scss"
 const Register = () => {
@@ -8,9 +10,9 @@ const Register = () => {
   const [isLogged, setIsLogged] = useState(false)
   const {register, handleSubmit, reset} = useForm()
 
-  const submit = (data:any) => {
-      const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users/login'
-      axios.post(URL, data)
+  const submit = (data: any) => {
+    console.log(data)
+      axios.post(endpointUrl+'auth/register', data)
         .then(res => {
           console.log(res.data)
           localStorage.setItem('token',res.data.data.token)
@@ -33,7 +35,7 @@ return (
       <div className='login__field' >
           <i className="input-icon fa-solid fa-user"></i>
           <input 
-              {...register('name')}
+              {...register('firstName')}
               autoComplete="on"
               placeholder="First Name"
               className="login__input-field" 
@@ -44,7 +46,7 @@ return (
 
           <input 
           
-              {...register('lastname')}
+              {...register('lastName')}
               autoComplete="on"
               placeholder="Last Name"
               className="login__input-field" 
@@ -81,7 +83,7 @@ return (
       <div className='login__field'>
           <i className="input-icon fa-solid fa-phone"></i>
           <input 
-              {...register('cellphone')} 
+              {...register('phone')} 
               autoComplete="off"
               type="tel" 
               placeholder="Cellphone" 
@@ -93,7 +95,7 @@ return (
       <div className='login__field'>
           <i className="input-icon fa-solid fa-calendar-days"></i>   
           <input 
-              {...register('date')}
+              {...register('birthday')}
               autoComplete="on"
               placeholder="Birthday"
               className="login__input-field" 

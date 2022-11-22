@@ -2,6 +2,7 @@ import "./login.scss"
 import axios from "axios"
 import { useForm } from 'react-hook-form'
 import { useState } from "react"
+import { endpointUrl } from "../../config"
 
 const Login = () => {
 
@@ -9,18 +10,26 @@ const Login = () => {
     const {register, handleSubmit, reset} = useForm()
 
     const submit = (data:any) => {
-        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users/login'
-        axios.post(URL, data)
+        console.log(data)
+        axios.post(endpointUrl+'auth/login', data)
           .then(res => {
             console.log(res.data)
-            localStorage.setItem('token',res.data.data.token)
-            setIsLogged(res.data.data.user)
+            // localStorage.setItem('token',res.data.data.token)
+            // setIsLogged(res.data.data)
+
+            localStorage.setItem('recipes', JSON.stringify({
+                darckMode: false, 
+                user: {
+                    token: res.data.token
+                }
+            }))
+            
+            reset({
+              email: '',
+              password: ''
+            })
           })
           .catch(err => console.log(err))
-        reset({
-          email: '',
-          password: ''
-        })
       }
 
 

@@ -1,6 +1,7 @@
 .sliders_container{
   width: 100%;
   position: relative;
+  margin-bottom: 20px;
   
   &-primari{
     width: 100%;
@@ -146,6 +147,7 @@
   .sliders_container{
     width: min(1080px, 100%);
     margin: 0 auto;
+    margin-bottom: 20px;
 
     &-primari{
       height: auto;
