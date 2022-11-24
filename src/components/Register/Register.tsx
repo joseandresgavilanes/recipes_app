@@ -5,18 +5,26 @@ import { endpointUrl } from '../../config'
 
 import "../login/login.scss"
 import "./register.scss"
+import { useDispatch } from 'react-redux'
+import { setUser } from '../../store/slices/user.slice'
 const Register = () => {
   
   const [isLogged, setIsLogged] = useState(false)
   const {register, handleSubmit, reset} = useForm()
+  const dispatch = useDispatch()
 
   const submit = (data: any) => {
     console.log(data)
       axios.post(endpointUrl+'auth/register', data)
         .then(res => {
           console.log(res.data)
-          localStorage.setItem('token',res.data.data.token)
-          setIsLogged(res.data.data.user)
+          dispatch(setUser(res.data))
+          setIsLogged(res.data)
+
+          axios.post(endpointUrl+'auth/login', data).then(ress=> {
+            console.log(ress)
+            localStorage.setItem('token', ress.data.token)
+          })
         })
         .catch(err => console.log(err))
       reset({

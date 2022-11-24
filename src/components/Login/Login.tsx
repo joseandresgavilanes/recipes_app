@@ -3,26 +3,27 @@ import axios from "axios"
 import { useForm } from 'react-hook-form'
 import { useState } from "react"
 import { endpointUrl } from "../../config"
+import { useDispatch } from "react-redux"
+import { setUser } from "../../store/slices/user.slice"
 
 const Login = () => {
 
     const [isLogged, setIsLogged] = useState(false)
     const {register, handleSubmit, reset} = useForm()
+    const dispatch = useDispatch()
 
     const submit = (data:any) => {
         console.log(data)
         axios.post(endpointUrl+'auth/login', data)
           .then(res => {
             console.log(res.data)
-            // localStorage.setItem('token',res.data.data.token)
-            // setIsLogged(res.data.data)
-
-            localStorage.setItem('recipes', JSON.stringify({
-                darckMode: false, 
-                user: {
-                    token: res.data.token
+            axios.get(endpointUrl+'users/me', {
+                headers: {
+                    'Authorization': 'JWT '+res.data.token
                 }
-            }))
+            }).then(ress=> dispatch(setUser(ress.data)))
+
+            localStorage.setItem('token', res.data.token)
             
             reset({
               email: '',
