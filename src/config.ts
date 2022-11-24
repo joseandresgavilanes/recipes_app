@@ -1,0 +1,1 @@
+export const endpointUrl = 'https://recipes-j1sh.onrender.com/api/v1/'

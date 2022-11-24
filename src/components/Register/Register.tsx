@@ -1,20 +1,30 @@
 import { useForm } from 'react-hook-form'
 import { useState } from "react"
 import axios from "axios"
+import { endpointUrl } from '../../config'
+
 import "../login/login.scss"
 import "./register.scss"
+import { useDispatch } from 'react-redux'
+import { setUser } from '../../store/slices/user.slice'
 const Register = () => {
   
   const [isLogged, setIsLogged] = useState(false)
   const {register, handleSubmit, reset} = useForm()
+  const dispatch = useDispatch()
 
-  const submit = (data:any) => {
-      const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users/login'
-      axios.post(URL, data)
+  const submit = (data: any) => {
+    console.log(data)
+      axios.post(endpointUrl+'auth/register', data)
         .then(res => {
           console.log(res.data)
-          localStorage.setItem('token',res.data.data.token)
-          setIsLogged(res.data.data.user)
+          dispatch(setUser(res.data))
+          setIsLogged(res.data)
+
+          axios.post(endpointUrl+'auth/login', data).then(ress=> {
+            console.log(ress)
+            localStorage.setItem('token', ress.data.token)
+          })
         })
         .catch(err => console.log(err))
       reset({
@@ -33,7 +43,7 @@ return (
       <div className='login__field' >
           <i className="input-icon fa-solid fa-user"></i>
           <input 
-              {...register('name')}
+              {...register('firstName')}
               autoComplete="on"
               placeholder="First Name"
               className="login__input-field" 
@@ -44,7 +54,7 @@ return (
 
           <input 
           
-              {...register('lastname')}
+              {...register('lastName')}
               autoComplete="on"
               placeholder="Last Name"
               className="login__input-field" 
@@ -81,7 +91,7 @@ return (
       <div className='login__field'>
           <i className="input-icon fa-solid fa-phone"></i>
           <input 
-              {...register('cellphone')} 
+              {...register('phone')} 
               autoComplete="off"
               type="tel" 
               placeholder="Cellphone" 
@@ -93,7 +103,7 @@ return (
       <div className='login__field'>
           <i className="input-icon fa-solid fa-calendar-days"></i>   
           <input 
-              {...register('date')}
+              {...register('birthday')}
               autoComplete="on"
               placeholder="Birthday"
               className="login__input-field" 
@@ -104,19 +114,20 @@ return (
       
 
       <button className="login__btn" >Register</button>
-      <a href="#" className="login__btn-link">Already got an account?</a>
-      <i className="fa-solid fa-utensils"></i>
-        <i className="fa-solid fa-carrot"></i>
-        <i className="fa-solid fa-mug-hot"></i>
-        <i className="fa-solid fa-pizza-slice"></i>
-        <i className="fa-solid fa-pepper-hot"></i>
-        <i className="fa-solid fa-ice-cream"></i>
-        <i className="fa-solid fa-martini-glass-citrus"></i>
-        <i className="fa-solid fa-drumstick-bite"></i>
-        <i className="fa-solid fa-burger"></i>
-        <i className="fa-solid fa-shrimp"></i>
-        <i className="fa-solid fa-wheat-awn"></i>
-        <i className="fa-solid fa-cookie-bite"></i>
+      <a href="#/login" className="login__btn-link">Already got an account?</a>
+
+      <i className="login-icon-utensils fa-solid fa-utensils"></i>
+      <i className="login-icon-carrot fa-solid fa-carrot"></i>
+      <i className="login-icon-mug-hot fa-solid fa-mug-hot"></i>
+      <i className="login-icon-pizza-slice fa-solid fa-pizza-slice"></i>
+      <i className="login-icon-pepper-hot fa-solid fa-pepper-hot"></i>
+      <i className="login-icon-ice-cream fa-solid fa-ice-cream"></i>
+      <i className="login-icon-martini-glass-citrus fa-solid fa-martini-glass-citrus"></i>
+      <i className="login-icon-drumstick-bite fa-solid fa-drumstick-bite"></i>
+      <i className="login-icon-burger fa-solid fa-burger"></i>
+      <i className="login-icon-shrimp fa-solid fa-shrimp"></i>
+      <i className="login-icon-wheat-awn fa-solid fa-wheat-awn"></i>
+      <i className="login-icon-cookie-bite fa-solid fa-cookie-bite"></i>
   </form>
 </div>
 

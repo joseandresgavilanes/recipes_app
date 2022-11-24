@@ -1,11 +1,11 @@
-import React from 'react'
+import { Slider } from "./slider/Slider"
 import TopRecipes from './topRecipes/TopRecipes'
-const Home = () => {
+
+export const Home = () => {
   return (
     <div>
-      <TopRecipes/>
+      <Slider />
+      <TopRecipes />
     </div>
   )
 }
-
-export default Home

@@ -2,25 +2,35 @@ import "./login.scss"
 import axios from "axios"
 import { useForm } from 'react-hook-form'
 import { useState } from "react"
+import { endpointUrl } from "../../config"
+import { useDispatch } from "react-redux"
+import { setUser } from "../../store/slices/user.slice"
 
 const Login = () => {
 
     const [isLogged, setIsLogged] = useState(false)
     const {register, handleSubmit, reset} = useForm()
+    const dispatch = useDispatch()
 
     const submit = (data:any) => {
-        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users/login'
-        axios.post(URL, data)
+        console.log(data)
+        axios.post(endpointUrl+'auth/login', data)
           .then(res => {
             console.log(res.data)
-            localStorage.setItem('token',res.data.data.token)
-            setIsLogged(res.data.data.user)
+            axios.get(endpointUrl+'users/me', {
+                headers: {
+                    'Authorization': 'JWT '+res.data.token
+                }
+            }).then(ress=> dispatch(setUser(ress.data)))
+
+            localStorage.setItem('token', res.data.token)
+            
+            reset({
+              email: '',
+              password: ''
+            })
           })
           .catch(err => console.log(err))
-        reset({
-          email: '',
-          password: ''
-        })
       }
 
 
@@ -57,18 +67,18 @@ const Login = () => {
         </div>
         <button className="login__btn">Login</button>
         <a href="#" className="login__btn-link">Forgot your password?</a>
-        <i className="fa-solid fa-utensils"></i>
-        <i className="fa-solid fa-carrot"></i>
-        <i className="fa-solid fa-mug-hot"></i>
-        <i className="fa-solid fa-pizza-slice"></i>
-        <i className="fa-solid fa-pepper-hot"></i>
-        <i className="fa-solid fa-ice-cream"></i>
-        <i className="fa-solid fa-martini-glass-citrus"></i>
-        <i className="fa-solid fa-drumstick-bite"></i>
-        <i className="fa-solid fa-burger"></i>
-        <i className="fa-solid fa-shrimp"></i>
-        <i className="fa-solid fa-wheat-awn"></i>
-        <i className="fa-solid fa-cookie-bite"></i>
+        <i className="login-icon-utensils fa-utensils fa-utensils"></i>
+        <i className="login-icon-carrot fa-solid fa-carrot"></i>
+        <i className="login-icon-mug-hot fa-solid fa-mug-hot"></i>
+        <i className="login-icon-pizza-slice fa-solid fa-pizza-slice"></i>
+        <i className="login-icon-pepper-hot fa-solid fa-pepper-hot"></i>
+        <i className="login-icon-ice-cream fa-solid fa-ice-cream"></i>
+        <i className="login-icon-martini-glass-citrus fa-solid fa-martini-glass-citrus"></i>
+        <i className="login-icon-drumstick-bite fa-solid fa-drumstick-bite"></i>
+        <i className="login-icon-burger fa-solid fa-burger"></i>
+        <i className="login-icon-shrimp fa-solid fa-shrimp"></i>
+        <i className="login-icon-wheat-awn fa-solid fa-wheat-awn"></i>
+        <i className="login-icon-cookie-bite fa-solid fa-cookie-bite"></i>
     </form>
 </div>
 

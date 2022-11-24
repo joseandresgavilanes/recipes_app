@@ -1,9 +1,10 @@
 import { useRef } from 'react'
 import { SearchRecipes } from "./searchRecipes/SearchRecipes"
-
-import "./header.scss"
 import { UserOptions } from './userOptions/UserOptions'
 import { useNavigate } from 'react-router-dom'
+import icon from '../../../assets/recipes-logo.png'
+
+import "./header.scss"
 
 export const Header = ()=> {
   const headerSearch = useRef<HTMLDivElement>(null)
@@ -28,21 +29,23 @@ export const Header = ()=> {
 
   const redirectHome = () => navigate('/')
 
-  console.log({height: screen.height, width: screen.width})
   return (
     <>
       <div ref={headerSearch} className="search_recipes">
-        <i onClick={openSearch} className='search_recipes-close bx bx-x'></i>
+        <i onClick={openSearch} className='search_recipes-close fa-solid fa-xmark'></i>
         <SearchRecipes className='search_recipes' />
       </div>
         
       <header className="header">
-        <h1 onClick={redirectHome} className="header-title">Recipes app</h1>
+        <div onClick={redirectHome} className="header-title">
+          <img className='header-title-logo' src={icon} alt="logo" />
+          <h1 className="header-title-text">Recipes app</h1>
+        </div>
         <div className='header_recipes'>
           <SearchRecipes className='header_recipes' />
         </div>
-        <i onClick={openSearch} className='header-search-icon search-icon bx bx-search-alt'></i>
-        <i onClick={openUserOptions} className='header-user bx bx-user-circle'></i>
+        <i onClick={openSearch} className='header-search-icon search-icon fa-solid fa-magnifying-glass'></i>
+        <i onClick={openUserOptions} className='header-user fa-regular fa-circle-user'></i>
         <UserOptions />
       </header>
     </>
