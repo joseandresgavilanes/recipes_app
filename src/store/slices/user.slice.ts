@@ -16,7 +16,6 @@ export const { setUser } = userSlice.actions
 export const getUser = (): ThunkAction<void, RootState, unknown, AnyAction> => async dispatch => {
   const token = localStorage.getItem('token')
   if(token){
-    console.log(token)
     return axios.get(endpointUrl+'users/me', {
       headers: {
         'Authorization': 'JWT '+token
