@@ -20,3 +20,49 @@ export type User = {
   status: string
   isVerified: boolean
 }
+
+export type Category = {
+  id: number
+  name: string
+  urlImg: string
+}
+
+// type preus = Pick<User, 'id' | 'firstName'>
+
+export type Ingredient = {
+  id: string
+  name: string
+  typeId: number
+  urlImg: string
+  type: {
+    id: number
+    name: string
+  }
+}
+
+export type Instruction = {
+  step: number
+  description: string
+}
+
+export type Recipe_ingredients = {
+  id: string
+  amount: string
+  recipeId: string
+  ingredientId: string
+  ingredient: Ingredient
+}
+
+export type Recipe = {
+  id: string
+  title: string
+  description: string
+  urlImg: string
+  time: number
+  portions: number
+  origin: string
+  likes: number
+  user: Pick<User, 'id' | 'firstName' | 'lastName'>
+  instructions: Instruction[]
+  recipes_ingredients: Recipe_ingredients[]
+}
