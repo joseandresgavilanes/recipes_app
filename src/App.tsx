@@ -9,6 +9,7 @@ import { getUser } from './store/slices/user.slice'
 import { AppDispatch } from './store'
 
 import './App.css'
+import { Footer } from './components/shared/footer/footer'
 
 function App() {
   const dispatch: AppDispatch = useDispatch()
@@ -29,7 +30,12 @@ function App() {
         <Route path='/upload-recipe' />
         <Route path='/supermarket-list' />
         <Route path='/menu-planner' />
+
+        <Route path='/recipes' >
+          <Route path=':id' />
+        </Route>
       </Routes>
+      <Footer />
     </div>
   )
 }

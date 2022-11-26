@@ -1,8 +1,8 @@
+import icon from '../../../assets/recipes-logo.png'
 import { useRef } from 'react'
 import { SearchRecipes } from "./searchRecipes/SearchRecipes"
 import { UserOptions } from './userOptions/UserOptions'
 import { useNavigate } from 'react-router-dom'
-import icon from '../../../assets/recipes-logo.png'
 
 import "./header.scss"
 

@@ -2,7 +2,7 @@ import { MouseEvent, useRef, useState, useEffect } from "react"
 import axios from "axios"
 import { endpointUrl } from "../../../config"
 import { Category } from "../../../vite-env"
-import { RecipesCategory } from "./recipeType/RecipesCategory"
+import { RecipesCategory } from "./recipeCategory/RecipesCategory"
 
 import "./slider.scss"
 
