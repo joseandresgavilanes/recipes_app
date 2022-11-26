@@ -30,6 +30,10 @@ function App() {
         <Route path='/upload-recipe' />
         <Route path='/supermarket-list' />
         <Route path='/menu-planner' />
+
+        <Route path='/recipes' >
+          <Route path=':id' />
+        </Route>
       </Routes>
       <Footer />
     </div>
