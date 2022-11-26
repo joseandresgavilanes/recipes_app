@@ -1,14 +1,12 @@
 import "./login.scss"
 import axios from "axios"
 import { useForm } from 'react-hook-form'
-import { useState } from "react"
 import { endpointUrl } from "../../config"
 import { useDispatch } from "react-redux"
 import { setUser } from "../../store/slices/user.slice"
 
 const Login = () => {
 
-    const [isLogged, setIsLogged] = useState(false)
     const {register, handleSubmit, reset} = useForm()
     const dispatch = useDispatch()
 
