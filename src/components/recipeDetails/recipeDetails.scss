@@ -6,4 +6,20 @@
     align-items: center;
     flex-direction: column;
     gap: 2em;
+
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        width: 95%;
+        height: 100%;
+
+        @media (min-width: 900px) {
+            flex-direction: row;
+        }
+    }
 }
+
