@@ -1,0 +1,122 @@
+.recipeDetails__ingredients{
+    background-color: rgb(248, 249, 225);
+    width: 95%;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    justify-content: center;
+    align-items: center;
+    color: var(--Text-gray);
+
+    &-description{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        justify-content: center;
+        text-align: center;
+        line-height: 30px;
+        &-details{
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: var(--Primary-color);
+            align-items: center;
+            padding: 0 20px;
+
+            &__social{
+                font-size: 20px;
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                align-items: center;
+                gap: .5em;
+
+            }
+        }
+    }
+
+    &-ingredients{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        line-height: 30px;
+
+        &__main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            justify-content: center;
+
+            &-ingredient{
+                &__check{
+                    cursor: pointer;
+                    background-color: #fff;
+                    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    appearance: none;
+                    border: 2px solid var(--Primary-color);
+
+                    &:checked{
+                        background-color:var(--Primary-color);
+                    }
+                }
+            
+            }
+        }
+    }
+
+    &-preparation{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        line-height: 30px;
+        &__content{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            justify-content: center;
+            &-step{
+                &__check{
+                    cursor: pointer;
+                    background-color: #fff;
+                    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    appearance: none;
+                    border: 2px solid var(--Primary-color);
+
+                    &:checked{
+                        background-color:var(--Primary-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &-extras{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        line-height: 30px;
+        &__content{
+            display: flex;
+            flex-direction: column;
+            gap: .5em;
+            background-color: rgb(241, 233, 195);
+            padding: 30px;
+        }
+    }
+}

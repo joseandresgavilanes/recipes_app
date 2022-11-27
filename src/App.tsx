@@ -10,6 +10,7 @@ import { AppDispatch } from './store'
 
 import './App.css'
 import { Footer } from './components/shared/footer/footer'
+import RecipeDetails from './components/recipeDetails/RecipeDetails'
 
 function App() {
   const dispatch: AppDispatch = useDispatch()
@@ -31,7 +32,7 @@ function App() {
         <Route path='/supermarket-list' />
         <Route path='/menu-planner' />
 
-        <Route path='/recipes' >
+        <Route path='/recipes' element={<RecipeDetails/>} >
           <Route path=':id' />
         </Route>
       </Routes>
