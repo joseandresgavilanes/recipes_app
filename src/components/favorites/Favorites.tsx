@@ -1,9 +1,10 @@
-import React from 'react'
+import './favorites.scss'
+import { endpointUrl } from '../../config'
 
-const Favorites = () => {
+export const Favorites = () => {
   return (
-    <div>Favorites</div>
+    <section className='favorites'>
+      Favorites
+    </section>
   )
 }
-
-export default Favorites

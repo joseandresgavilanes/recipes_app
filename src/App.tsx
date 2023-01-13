@@ -10,6 +10,7 @@ import { AppDispatch } from './store'
 
 import './App.css'
 import { Footer } from './components/shared/footer/footer'
+import { Favorites } from './components/favorites/Favorites'
 
 function App() {
   const dispatch: AppDispatch = useDispatch()
@@ -26,7 +27,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/my-recipes' />
-        <Route path='/favorites' />
+        <Route path='/favorites' element={<Favorites />} />
         <Route path='/upload-recipe' />
         <Route path='/supermarket-list' />
         <Route path='/menu-planner' />

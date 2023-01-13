@@ -1,0 +1,9 @@
+.favorites{
+  height: calc(100vh - 46px);
+}
+
+@media (min-width: 700px) {
+  .favorites{
+    height: calc(100vh - 60px);
+  }
+}
