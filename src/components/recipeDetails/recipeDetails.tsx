@@ -1,9 +1,22 @@
 import React from 'react'
+import Ingredients from './ingredients/Ingredients'
+import MainRecipe from './mainRecipe/MainRecipe'
 
-const recipeDetails = () => {
+import "./recipeDetails.scss"
+import RecommendedRecipes from './recommendedRecipes/RecommendedRecipes'
+
+const RecipeDetails = () => {
   return (
-    <div>recipeDetails</div>
+    <div className="recipeDetails">
+        <MainRecipe/>
+
+        <div className="recipeDetails__main">
+          <Ingredients/>
+          <RecommendedRecipes/>
+        </div>
+    </div>
+
   )
 }
 
-export default recipeDetails
+export default RecipeDetails

@@ -1,5 +1,48 @@
 .favorites{
   height: calc(100vh - 46px);
+  padding: 0 20px;
+
+  &-title{
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  &-recipes{
+    width: min(1200px, 100%);
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  &_recipe{
+    width: 220px;
+    overflow: hidden;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.562);
+    border-radius: 4px;
+
+    &-img{
+      width: 100%;
+    }
+
+    &-info{
+      display: flex;
+      padding: 6px 8px;
+      min-height: 40px;
+      justify-content: space-between;
+
+      &-text{
+        font-size: 14px;
+      }
+
+      &-icon{
+        color: #e40d0d;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 @media (min-width: 700px) {

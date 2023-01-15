@@ -1,10 +1,19 @@
+import { MouseEvent } from "react"
 import { Recipe } from "../../../../vite-env"
+import { useNavigate } from "react-router"
 
 import './recipeCard.scss'
 
 export const RecipeCard = ({recipe}: {recipe: Recipe})=> {
+  const navigate = useNavigate()
+  
+  const selectRecipe = (event: MouseEvent<HTMLElement>) => {
+    const id = event.currentTarget.dataset.id
+    navigate('/recipes/'+id)
+  }
+
   return (
-    <article className="recipes-card" data-id={recipe.id}>
+    <article onClick={selectRecipe} className="recipes-card" data-id={recipe.id}>
       <div className="recipes-card-img">
         <img src={recipe.urlImg} alt="" />
       </div>

@@ -1,5 +1,5 @@
 import { Slider } from "./slider/Slider"
-import TopRecipes from './topRecipes/TopRecipes'
+import TopRecipes from './topRecipes/topRecipes'
 import { Recipes } from "./recipes/Recipes"
 
 import "./home.scss"
